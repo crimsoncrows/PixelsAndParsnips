@@ -1,3 +1,9 @@
+/*DO NOT MODIFY BGOVERLAY, MENU, HEADER AND FOOTER AS THE RESPONSIVE LAYOUTS WERE ALREADY SET, IF 
+MODIFICATIONS ARE NEEDED, 
+MAKE A NEW STYLESHEET AND COPY THE PROPERTIES NEEDED*/
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -7,9 +13,11 @@ body {
   background-position: center;  
   background-attachment: fixed; 
   overflow-x: hidden;           
-  height: 100vh;                
+  height: 100vh; 
 }
 
+
+/*FOR MENU*/
 li{
   list-style: none;
 }
@@ -17,20 +25,29 @@ li{
 .showMenuOnMobile{
     display: none;
 }
+/*FOR MENU*/
 
+
+/*BG OVERLAY FOR OPENING THE SIDEBAR*/
 .darkBg{
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.847);
-    z-index: -998;
+    z-index: 998;
     position: absolute;
     top: 0;
     display: none;
 }
+/*BG OVERLAY FOR OPENING THE SIDEBAR*/
+
+
+
+/*FOR DESKTOP NAVBAR*/
 
 .nav-bar{
   display: flex;
   flex-direction: row;
+  position: fixed;
   align-items: center;
   justify-content: space-between; 
   height: 50px;
@@ -43,7 +60,7 @@ li{
   font-weight: 400px;
   font-size: 20px;
   box-sizing: border-box; 
-
+  z-index: 1000;
 }
 
 .nav-title {
@@ -61,6 +78,28 @@ li{
   color:rgb(98, 67, 9); 
 }
 
+.nav-pages{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2vw; 
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.nav-pages li {
+  white-space: nowrap; 
+}
+
+
+/*FOR DESKTOP NAVBAR*/
+
+
+
+/*FOR MOBILE NAVBAR*/
 .nav-bar-side{
   display: none;
   flex-direction: column;
@@ -103,21 +142,132 @@ li{
   left:120px;
  
 }
+/*FOR MOBILE NAVBAR*/
 
-.nav-pages{
+/*FOR LANDING PAGE*/
+.landing{
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  gap: 2vw; 
-  flex-wrap: nowrap;
+  position: relative;
+ min-height: 100vh;
+  font-family: Pixelify Sans;
+  color:white;
+}
+
+.landing img{
+  width: 40%;
+  height:40%;
   margin: 0;
   padding: 0;
 }
+.main-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1PX SOLID rgba(255, 255, 255, 0);
 
-.nav-pages li {
-  white-space: nowrap; 
+
 }
+.explore-button img{
+  position: relative;
+  bottom: 40px;
+}
+/*FOR LANDING PAGE*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOR FOOTER AREA*/
+
+footer {
+
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0.62) 50%, rgba(253, 187, 45, 0) 79%);
+  height: auto; /* Changed from fixed height */
+  min-height: 120px; /* Minimum height */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 15px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Better space distribution */
+  gap: 15px; /* Reduced gap */
+  font-family: Pixelify Sans;
+  color: white;
+  white-space: nowrap;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.team-and-slogan{
+  display: flex;
+  flex-direction: column;
+  gap:2px;
+  white-space: nowrap;
+}
+
+.footer-name{
+  font-size: 24px;
+}
+
+footer img{
+  height: 45px;
+  width: 45px;
+  
+}
+
+.socmeds{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright-site{
+  font-size: 13px;
+  position: relative;
+  right: 50px;
+}
+
+.copyright-mobile{
+  display: none;
+  font-size: 10px;
+}
+/*FOR FOOTER AREA*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOR SCREEN SIZES*/
 
 @media (max-width: 1024px){
   .nav-pages {
@@ -127,7 +277,32 @@ li{
   .nav-bar {
     font-size: 16px;
     padding: 0 20px;
+      color:rgb(98, 67, 9);
+
   }
+
+ 
+  footer{
+    gap: 12px;
+    padding: 10px 15px;
+  }
+  footer img{
+    height: 30px;
+  width: 30px;
+  
+  }
+  .footer-name{
+  font-size: 20px;
+  font-weight: 500;
+}
+  .footer-slogan{
+    font-size: 14px;
+    color: rgb(215, 215, 215);
+  }
+  .copyright-site{
+    font-size: 12px;
+  }
+
 }
 
 @media (max-width: 768px){
@@ -138,20 +313,79 @@ li{
   .nav-bar {
     font-size: 14px;
     padding: 0 15px;
+      color:rgb(98, 67, 9);
+
   }
+
+footer{
+    gap: 10px;
+    padding: 5px 10px;
+  }
+  footer img{
+    height: 20px;
+  width: 20px;
+  
+  }
+  .footer-name{
+  font-size: 18px;
+}
+  .footer-slogan{
+    font-size: 12px;
+  }
+  .copyright-site{
+    font-size: 10px;
+    position: relative;
+      right: 45px;
+  }
+
+  
 }
 
 
 @media (max-width:521px){
   .nav-pages {
     gap: 5px;
+    
   }
   
   .nav-bar {
     font-size: 13px;
     padding: 0 15px;
+      color:rgb(98, 67, 9);
+
   }
+  footer{
+    gap: 10px;
+    padding: 5px 10px;
+  }
+  footer img{
+    height: 20px;
+  width:20px;
+  
+  }
+  .footer-name{
+  font-size: 16px;
 }
+  .footer-slogan{
+    font-size: 10px;
+  }
+  .copyright-site{
+    font-size: 9px;
+      position: relative;
+      right: 35px;
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+/*FOR MOBILE SIZE*/
 
 @media (max-width: 480px){
   .hideOnMobile{
@@ -159,7 +393,7 @@ li{
   }
   
   .removeBorder{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(5, 5, 5, 0);
     border:none;
     color: #F7E26B; 
    
@@ -169,6 +403,8 @@ li{
     justify-content: space-between;
     padding: 0 15px;
     font-size: 16px;
+      z-index: 995;
+
   }
 
   .nav-pages {
@@ -182,6 +418,62 @@ li{
 
   .showMenuOnMobile{
     display: flex;
+  }
+
+.landing{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  bottom:50px;
+  z-index: -9999;
+}
+
+.landing img{
+  width: 70%;
+  height:70%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.landing h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  bottom:30px;
+ 
+}
+
+  footer{
+    gap: 10px;
+    padding: 5px 5px;
+  }
+  footer img{
+    height: 20px;
+  width:20px;
+  
+  }
+  .footer-name{
+  font-size: 16px;
+}
+  .footer-slogan{
+    font-size: 10px;
+  }
+  .copyright-site{
+    display: none;
+  }
+  
+.copyright-mobile{
+  display: flex;
+  font-size:8px;
+  margin-top: 5px;
+  color: rgb(215, 215, 215);
+
+}
+  .socmeds{
+    padding-right: 5px;
   }
 
 }
