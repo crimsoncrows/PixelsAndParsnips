@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greener Grass Studios</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="darkBg"></div>
+
+  <nav class="nav-bar removeBorder">
+    <h5 class="nav-title">Greener Grass Studios</h5>
+
+    <ul class="nav-pages">
+      <li class="hideOnMobile"><a href="#">HOME</a></li>
+      <li class="hideOnMobile"><a href="#">ABOUT US</a></li>
+      <li class="hideOnMobile"><a href="#">TEAM</a></li>
+      <li class="hideOnMobile"><a href="#">EVENTS</a></li>
+      <li class="hideOnMobile"><a href="#">ACHIEVEMENTS</a></li>
+      <a href="#" onclick="showSidebar()" class="showMenuOnMobile"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+  </ul>
+  </nav>
+
+  <nav class="nav-bar-side" id="sidebar">
+   
+    <div class="side-pages-banner">
+      <a href="#" onclick="hideSidebar()" class="close-button"><svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+
+        <img src="home.png" alt="" style="margin-top: 40px;">
+        <img src="about-us.png" alt="">
+        <img src="team.png" alt="">
+        <img src="events.png" alt="">
+        <img src="achievements (1).png" alt="">
+    </div>
+
+
+  </nav>
+
+
+
+  <script>
+    function showSidebar(){
+       const sidebar= document.querySelector('.nav-bar-side')
+       sidebar.style.display= 'flex'
+       const overlay= document.querySelector('.darkBg')
+       overlay.style.display='flex';
+
+       const title= document.querySelector('.nav-title')
+       title.style.color='#f7e26b35';
+
+       const menu= document.querySelector('.showMenuOnMobile')
+       menu.style.visibility='hidden';
+
+       document.getElementById('sidebar').className = '.nav-bar-side';
+
+
+    }
+    
+      function hideSidebar(){
+       const sidebar= document.querySelector('.nav-bar-side')
+       sidebar.style.display= 'none'
+        const overlay= document.querySelector('.darkBg')
+       overlay.style.display='none'
+
+        const title= document.querySelector('.nav-title')
+        title.style.color= '#F7E26B';
+
+      const menu= document.querySelector('.showMenuOnMobile')
+       menu.style.visibility='visible';
+        
+    }
+
+ 
+  </script>
+
+</body>
+
+</html>
