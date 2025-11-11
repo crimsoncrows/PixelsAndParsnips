@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greener Grass Studios</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="darkBg"></div>
+
+  <nav class="nav-bar removeBorder">
+    <h5 class="nav-title">Greener Grass Studios</h5>
+
+    <ul class="nav-pages">
+      <li class="hideOnMobile"><a href="home.html">HOME</a></li>
+      <li class="hideOnMobile"><a href="aboutus.html">ABOUT US</a></li>
+      <li class="hideOnMobile"><a href="team.html">TEAM</a></li>
+      <li class="hideOnMobile"><a href="events.html">EVENTS</a></li>
+      <li class="hideOnMobile"><a href="achievements.html">ACHIEVEMENTS</a></li>
+      <a href="#" onclick="showSidebar()" class="showMenuOnMobile"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+  </ul>
+  </nav>
+
+  <nav class="nav-bar-side" id="sidebar">
+   
+    <div class="side-pages-banner">
+      <a href="#" onclick="hideSidebar()" class="close-button"><svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+
+        <img src="home.png" alt="home" style="margin-top: 40px;">
+        <img src="about-us.png" alt="about-us">
+        <img src="team.png" alt="team">
+        <img src="events.png" alt="events">
+        <img src="achievements (1).png" alt="achievements">
+        
+    </div>
+
+
+  </nav>
+
+    <!--PUT EVERTHING ELSE HERE-->
+
+        <div style="margin-top: 150px; border: 1px solid pink;">
+            <h1>Put something here</h1>
+        </div>
+            <h1>Put something here</h1>
+            <h1>Put something here</h1>
+            <h1>Put something here</h1>
+            <h1>Put something here</h1>
+            <h1>Put something here</h1>
+            <h1>Put something here</h1>
+    <!--PUT EVERTHING ELSE HERE-->
+
+
+  <footer>
+
+    <div class="team-and-slogan">
+      <span class="footer-name">Pixels and Parsnips</span>
+      <span class="footer-slogan">Reaping wins, one seed at a time.</span>
+      <span class="copyright-mobile">2025. All rights reserved.</span>
+
+    </div>
+
+    <div class="copyright-site">
+      <span>2025. All rights reserved.</span>
+    </div>
+
+    <div class="socmeds">
+
+      <img src="twitch.avif" alt="twitch" style="border-radius: 5px;">
+      <img src="disc.png" alt="discord">
+      <img src="yt.png" alt="yt">
+
+    </div>
+
+
+  </footer>
+
+
+
+
+  <script>
+    function showSidebar(){
+       const sidebar= document.querySelector('.nav-bar-side')
+       sidebar.style.display= 'flex'
+       const overlay= document.querySelector('.darkBg')
+       overlay.style.display='flex';
+
+      const foot= document.querySelector(footer)
+      foot.style.display='none';
+      
+      const nav= document.querySelector('.nav-bar')
+
+
+      
+       const menu= document.querySelector('.showMenuOnMobile')
+       menu.style.visibility='hidden';
+
+       document.getElementById('sidebar').className = '.nav-bar-side';
+
+
+    }
+    
+      function hideSidebar(){
+       const sidebar= document.querySelector('.nav-bar-side')
+       sidebar.style.display= 'none'
+        const overlay= document.querySelector('.darkBg')
+       overlay.style.display='none'
+
+      if (window.matchMedia("(max-width: 480px)").matches) {
+        title.style.color = '#F7E26B';
+      } else {
+        title.style.color = 'rgb(98, 67, 9);'; 
+
+      const menu= document.querySelector('.showMenuOnMobile')
+       menu.style.visibility='visible';
+        
+       const foot= document.querySelector(footer)
+      foot.style.display='flex';
+
+    }
+  }
+ 
+  </script>
+
+</body>
+
+</html>
